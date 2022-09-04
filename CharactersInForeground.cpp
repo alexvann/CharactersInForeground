@@ -9,11 +9,11 @@ hook_t<vtable::InfoManager, offset::InfoManager::RenderHud> draw_hud_hook;
 patch_nop_t<0x0047A9BF, 5> disable_characters_and_bg_draw;
 
 patch_t<0x0047DB95, 
-		0x5F,				/*pop edi*/
-		0x5E,				/*pop esi*/
-		0x5B,				/*pop ebx*/
+		0x5F,			/*pop edi*/
+		0x5E,			/*pop esi*/
+		0x5B,			/*pop ebx*/
 		0x83, 0xC4, 0x14,	/*add esp, 0x14*/
-		0xC3,				/*retn*/
+		0xC3,			/*retn*/
 		0x90, 0x90, 0x90>	/*nop*/
 		draw_hud_custom_prolog;
 
